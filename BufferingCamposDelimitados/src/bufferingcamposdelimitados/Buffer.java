@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -22,8 +23,7 @@ public class Buffer {
     ArrayList<Person> Persons = new ArrayList();
     File Archive;
 
-    public Buffer() {
-        this.Archive = new File("Persons.txt");
+    public Buffer() {        
     }
 
     public void addPerson(Person person) {
@@ -131,7 +131,8 @@ public class Buffer {
                 }
             } while (true);
 
-        } catch (Exception e) {
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "Error al abrir el archivo.");
         }
         return false;
     }
