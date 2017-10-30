@@ -141,6 +141,10 @@ public class Buffer {
         return Persons;
     }
 
+    public void setPerson(int i, Person person) {
+        this.Persons.set(i, person);
+    }
+    
     public void setPersons(ArrayList<Person> Persons) {
         this.Persons = Persons;
     }
